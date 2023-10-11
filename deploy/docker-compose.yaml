@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  micro-docker1:
+    image: micro-docker:1.2
+    ports:
+    - "8080:9090"
+    environment:
+    - TRM=5200
+    networks:
+    - local
+    
+  micro-docker2:
+    image: micro-docker:1.2
+    ports:
+    - "8081:9090"
+    environment:
+    - TRM=5200
+    networks:
+    - local
+
+
+networks:
+  local:
+
