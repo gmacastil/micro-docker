@@ -11,6 +11,11 @@ pool:
 
 steps:
 
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '17'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 - task: Maven@4
   displayName: Compilar
   inputs:
